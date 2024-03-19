@@ -1,6 +1,6 @@
 #pragma once
 #include <raylib.h>
-#include <iostream>
+#include <stdio.h>
 
 #include "Board.hpp"
 
@@ -14,5 +14,7 @@ class Game
     Game(int size);
 
     void mainLoop();
+
+    const bool isRunning();
 };
 

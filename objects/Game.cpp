@@ -5,10 +5,15 @@ Game::Game(int size)
   InitWindow(300 * size, 300 * size, "Game");
 }
 
+const bool Game::isRunning() 
+{
+  return !WindowShouldClose();
+}
+
 void Game::mainLoop() 
 {
-  while(true) 
+  while(isRunning()) 
   {
-    std::cout<<"1";
+    printf("print");
   }
 }
