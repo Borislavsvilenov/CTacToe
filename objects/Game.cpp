@@ -14,6 +14,8 @@ void Game::mainLoop()
 {
   while(isRunning()) 
   {
-    printf("print");
+    BeginDrawing();
+
+    EndDrawing();
   }
 }
