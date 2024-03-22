@@ -3,6 +3,7 @@
 Game::Game(int size)
 {
   InitWindow(300 * size, 300 * size, "Game");
+  SetTargetFPS(60);
 }
 
 const bool Game::isRunning() 
