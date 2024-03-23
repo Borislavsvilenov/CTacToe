@@ -17,6 +17,17 @@ Board::Board(int x, int y, int s)
 	}
 }
 
+Board::~Board()
+{
+	for(int i = 0; i < 3; i++)
+	{
+		for(int j = 0; j < 3; j++)
+		{
+			delete sub[i][j];
+		}
+	}
+}
+
 void Board::move()
 {
 
