@@ -22,7 +22,7 @@ void Game::mainLoop()
     BeginDrawing();
 
 		board.drawBoard();
-
+		
     EndDrawing();
   }
 }
