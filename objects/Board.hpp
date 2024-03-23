@@ -17,6 +17,7 @@ public:
 
 	void move();
 	void subdivide();
+	void limitMvs();
 	void checkWin();
 	void win();
 

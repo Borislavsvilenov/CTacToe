@@ -15,6 +15,11 @@ void Board::subdivide()
 
 }
 
+void Board::limitMvs()
+{
+
+}
+
 void Board::checkWin()
 {
 
@@ -27,7 +32,7 @@ void Board::win()
 
 void Board::drawBoard()
 {
-
+	DrawRectangle()
 }
 
 
