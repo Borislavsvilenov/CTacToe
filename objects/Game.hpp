@@ -9,9 +9,11 @@ class Game
   private:
 
   public:
-    int s;
+		int winner = 0;
 
-    Game(int size);
+		Board board;
+
+    Game(int s);
 
     void mainLoop();
 

@@ -1,8 +1,8 @@
 #include "Game.hpp"
 
-Game::Game(int size)
+Game::Game(int s) : board(0, 0, s)
 {
-  InitWindow(300 * size, 300 * size, "Game");
+  InitWindow(900, 900, "Game");
   SetTargetFPS(60);
 }
 
@@ -16,6 +16,8 @@ void Game::mainLoop()
   while(isRunning()) 
   {
     BeginDrawing();
+
+		board.drawBoard();
 
     EndDrawing();
   }

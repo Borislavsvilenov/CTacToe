@@ -3,26 +3,26 @@
 
 class Board
 {
-private:
+	private:
 
-public:
-	int winner = 0;
-	int mvs = [[0, 0, 0],
-						 [0, 0, 0],
-						 [0, 0, 0]];
-	
-	bool subd = false;
+	public:
+		int winner = 0;
+		int mvs[3][3];
 
-	Board();
+		bool subd = false;
 
-	void move();
-	void subdivide();
-	void limitMvs();
-	void checkWin();
-	void win();
+		Vector2 pos;
+		Vector2 size;
 
-	void drawBoard();
+		Board(int x, int y, int s);
 
+		void move();
+		void subdivide();
+		void limitMvs();
+		void checkWin();
+		void win();
+
+		void drawBoard();
 };
 
 

@@ -1,8 +1,20 @@
 #include "Board.hpp"
 
-Board::Board() 
+Board::Board(int x, int y, int s)
 {
+	pos.x = x; 
+	pos.y = y;
 
+	size.x = s;
+	size.y = s;
+
+	for(int i = 0; i < 3; i++)
+	{
+		for(int j = 0; j < 3; j++)
+		{
+			mvs[i][j] = 0;
+		}
+	}
 }
 
 void Board::move()
@@ -32,7 +44,11 @@ void Board::win()
 
 void Board::drawBoard()
 {
-	DrawRectangle()
+	int width = size.x / 50;
+	DrawRectangle(pos.x + size.x/3 - width/2, pos.y, width, size.y, Color{255, 255, 255, 255});
+	DrawRectangle(pos.x + 2*size.x/3 - width/2, pos.y, width, size.y, Color{255, 255, 255, 255});
+	DrawRectangle(pos.x, pos.y + size.y/3 - width/2, size.x, width, Color{255, 255, 255, 255});
+	DrawRectangle(pos.x, pos.y + 2*size.y/3 - width/2, size.x, width, Color{255, 255, 255, 255});
 }
 
 
