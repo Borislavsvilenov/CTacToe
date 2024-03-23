@@ -24,7 +24,13 @@ void Board::move()
 
 void Board::subdivide()
 {
-
+	for(int i = 0; i < 3; i++)
+	{
+		for(int j = 0; j < 3; j++)
+		{
+			sub[i][j] = new Board(i * size.x/3, j * size.y/3, size.x/3);
+		}
+	}
 }
 
 void Board::limitMvs()

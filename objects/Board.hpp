@@ -10,6 +10,7 @@ class Board
 		int mvs[3][3];
 
 		bool subd = false;
+		Board* sub[3][3];
 
 		Vector2 pos;
 		Vector2 size;
