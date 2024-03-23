@@ -25,6 +25,7 @@ class Board
 		void win();
 
 		void drawBoard();
+		void drawX(Vector2 pos, int size);
 };
 
 

@@ -69,3 +69,8 @@ void Board::drawBoard()
 }
 
 
+void Board::drawX(Vector2 pos, int size)
+{
+	DrawLineEx(pos, Vector2{pos.x + size, pos.y + size}, 5, WHITE);
+	DrawLineEx(Vector2{pos.x + size, pos.y}, Vector2{pos.x, pos.y + size}, 5, WHITE);
+}
