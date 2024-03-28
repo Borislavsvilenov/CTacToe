@@ -1,5 +1,7 @@
 #pragma once
 #include <raylib.h>
+#include <iostream>
+#include <cmath>
 
 class Board
 {
@@ -18,7 +20,7 @@ class Board
 		Board(int x, int y, int s);
 		~Board();
 
-		void move();
+		bool move(Vector2 p, int player);
 		void subdivide();
 		void limitMvs();
 		void checkWin();

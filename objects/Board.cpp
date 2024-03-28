@@ -28,10 +28,12 @@ Board::~Board()
 	}
 }
 
-void Board::move(Vector2 p, int player)
+bool Board::move(Vector2 p, int player)
 {
-	int gridX = p.x / size.x;
-	int gridY = p.y / size.y;
+	int gridX = floor(p.x / size.x);
+	int gridY = floor(p.y / size.y);
+	
+	bool ret = false;
 
 	if(mvs[gridX][gridY] == 0)
 	{	
@@ -45,8 +47,14 @@ void Board::move(Vector2 p, int player)
 			{
 				mvs[gridX][gridY] = -1;
 			}
+		} 
+		else 
+		{
+			ret = sub[gridX][gridY]->move(p, player);
 		}
 	}
+	
+	return ret;
 }
 
 void Board::subdivide()
